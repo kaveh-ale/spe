@@ -1,10 +1,10 @@
 # Project
 
-ALE Python Examples
-Developed by Kaveh Majidi @ ALE
-An Example on how to use Python and saa on ALE AOS
+ALE Python Examples.
+Developed by Kaveh Majidi @ ALE.
+An Example on how to use Python and saa on ALE AOS.
 In this example, saa will ping a specific IP address and on failure of the ping it will execute the python script called check-camera.py on the switch. The python script will admin disable/Enable the POE port that the camera is connected.
-Use case is that some cameras will go into sleep after a period of inactivity. To bring them up again you need to disable/enable the POE port.
+Use case: some cameras will go into sleep after a period of inactivity. To bring them up again you need to disable/enable the POE port when they are not active(ping fails).
 
 # Version
 
@@ -16,8 +16,8 @@ Python > 3.2
 
 # How to use
 Modify the port-map.txt file to reflect the ports that are connected to cameras.
-Copy the check-camera.py  and port-map.txt to the python directory of the switch.(/flash/python)
-Use the sample-switch-config.txt file as an example how to configure saa on the Switch
+Copy the check-camera.py  and port-map.txt to the python directory of the switch.(/flash/python).
+Use the sample-switch-config.txt file as an example how to configure saa on the Switch.
 After starting the saa, monitor the switch for execution of the script. Minimum interval for saa check is 1 minute. Refer to saa documentation for further configuration options.
 
 
