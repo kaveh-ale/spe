@@ -43,8 +43,9 @@ def find_replace_keys(zipfile_name):
                         item_start_location=line.find(search_item)
                         line_end_location=line.find("\n")
                         linkagg_location=line.find("linkagg")
+                        lacp_location=line.find("lacp")
                         ntp_location=line.find("ntp")
-                        if(item_start_location >  -1 and linkagg_location == -1 and ntp_location ==-1):
+                        if(item_start_location >  -1 and linkagg_location == -1 and ntp_location ==-1 and lacp_location == -1):
                             found_key=(line[item_start_location+len(search_item)+1:line_end_location])
                             if (found_key):
                                 found_key_list.append(found_key)
@@ -83,7 +84,7 @@ def start_cleanup(zipfile_name):
     print("")
     new_zipfile_name=zip_files(zipfile_name)
     temp_dir=zipfile_name.replace(".zip","")
-    #shutil.rmtree (temp_dir)
+    shutil.rmtree (temp_dir)
     print("All file are cleaned and zipped in a new file: " + new_zipfile_name)
     print("")
     end_time = time.time()
