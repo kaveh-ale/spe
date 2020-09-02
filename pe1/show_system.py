@@ -12,7 +12,7 @@ with open('switch_list.yaml') as file:
 
 ##### Starting a loop to perform the following on each switch  #####
 print("##########        Operation Started.........  #############")
-print("Example of connecting to switch using CLI API and pull VLAN table")
+print("Example of connecting to switch using CLI  and pull VLAN table")
 
 for switch in switch_list:
     ip=switch_list[switch]['ip']
